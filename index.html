@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Float examples</title>
+    <style>
+        body {
+            color: white;
+            font-weight: bold;
+            font-family: sans-serif;
+            background-color: gray;
+            margin: 0;
+        }
+        input {
+            margin: 60px 0px;
+        }
+        section {
+            box-sizing: border-box;
+            border: 5px solid black;
+            border-collapse: separate;
+            box-shadow: 5px 10px 20px black;
+            text-align: center;
+        }
+        header {
+            background-color: darkred;
+        }
+        main {
+            background-color: darkgreen;
+        }
+        footer {
+            background-color: darkblue;
+        }
+        #banner-block {
+            background-color: red;
+            width: 75%;
+        }
+        #logo-block {
+            background-color: red;
+            width: 25%;
+        }
+        #left-block {
+            background-color: green;
+            width: 45%;
+        }
+        #right-block {
+            background-color: green;
+            width: 55%;
+        }
+        #main-block {
+            background-color: green;
+        }
+        #footer-block {
+            background-color: blue;
+        }
+    </style>
+    <script>
+        function changeFloat(elementName) {
+            const elementStyle = document.getElementById(elementName).style;
+            elementStyle.float ? elementStyle.float = "" : elementStyle.float = "left"; 
+        }
+        function changeClear(elementName) {
+            const elementStyle = document.getElementById(elementName).style;
+            elementStyle.clear ? elementStyle.clear = "" : elementStyle.clear = "left"; 
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <section id="banner-block">
+            <input type="checkbox" id="banner" onclick="changeFloat('banner-block');">
+            <label for="banner">FLOAT LEFT BANER</label>
+        </section>
+        <section id="logo-block">
+            <input type="checkbox" id="logo" onclick="changeFloat('logo-block');">
+            <label for="logo">FLOAT LEFT LOGO</label>
+        </section>
+    </header>
+    <main>
+        <section id="left-block">
+            <input type="checkbox" id="left" onclick="changeFloat('left-block');">
+            <label for="left">FLOAT LEFT BLOK LEWY</label>
+        </section>
+        <section id="right-block">
+            <input type="checkbox" id="right" onclick="changeFloat('right-block');">
+            <label for="right">FLOAT LEFT BLOK PRAWY</label>
+        </section>
+        <section id="main-block">
+            <input type="checkbox" id="main" onclick="changeFloat('main-block');">
+            <label for="main">FLOAT LEFT BLOK GŁÓWNY</label>
+        </section>
+    </main>
+    <footer>
+        <section id="footer-block">
+            <input type="checkbox" id="footer" onclick="changeClear('footer-block');">
+            <label for="footer">CLEAR LEFT STOPKA</label>
+        </section>
+    </footer>
+</body>
+</html>
